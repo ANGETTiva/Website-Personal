@@ -357,7 +357,7 @@ p {
   transition: color 0.3s ease;
 }
 .sidebar-contact a:hover {
-  color: #fff;
+  color: #2b62f7;
   text-decoration: underline;
 }
 .social-links a {
@@ -376,4 +376,5 @@ footer {
   border-radius: 8px;
   font-weight: 600;
   margin-top: 40px;
+
 }
