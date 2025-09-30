@@ -1,0 +1,379 @@
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.container {
+  max-width: 900px; /* sesuai kebutuhan */
+  margin: 0 auto; /* center horizontal */
+  padding: 30px 20px; /* jarak dalam */
+  box-sizing: border-box;
+  background-color: #ffffff; /* jika ingin background */
+  border-radius: 10px;
+}
+
+body {
+  margin: 0;
+  background-color: #f2f2f2;
+  line-height: 1.6;
+  font-size: 14px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* Header dan navigasi */
+header {
+  background-color: #004aad;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap; /* agar menu bisa wrap jika sempit */
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #ffcc00;
+}
+
+/* Efek warna timbul saat aktif */
+nav ul li a.active {
+  color: #ffcc00;
+  text-shadow: 0 0 8px #ffcc00;
+}
+
+/* Section styling */
+section {
+  background-color: white;
+  padding: 25px 30px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+  scroll-margin-top: 80px; /* untuk offset sticky navbar */
+}
+
+/* Judul section */
+section h1 {
+  margin-bottom: 20px;
+  color: #004aad;
+  border-bottom: 3px solid #004aad;
+  padding-bottom: 8px;
+  font-size: 1.8rem;
+}
+
+/* Table styling */
+.table-wrapper {
+  overflow-x: auto; /* buat scroll horizontal */
+  margin-top: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 400px; /* agar tabel tidak terlalu kecil */
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #004aad;
+  color: white;
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* List styling */
+ul {
+  margin-top: 15px;
+  padding-left: 20px;
+  list-style-type: disc;
+  color: #555;
+}
+
+ul li {
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+/* Paragraph styling */
+p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  nav ul li a {
+    font-size: 1rem;
+  }
+
+  section {
+    padding: 20px 15px;
+  }
+
+  section h1 {
+    font-size: 1.5rem;
+  }
+
+  /* Bungkus tabel dengan div agar bisa scroll */
+  .table-wrapper {
+    margin-top: 10px;
+  }
+
+  table {
+    font-size: 0.9rem;
+    min-width: 300px; /* minimal lebar tabel */
+  }
+
+  ul li {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+}
+
+.table-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+#pendidikan {
+  background-color: #ffffff;
+  padding: 30px 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 74, 173, 0.15);
+  max-width: 900px;
+  margin: 40px auto;
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#pendidikan h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #004aad;
+  padding-bottom: 8px;
+}
+
+.pendidikan-desc {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 25px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.pendidikan-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.pendidikan-list li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #004aad;
+}
+
+/* Custom bullet menggunakan before */
+.pendidikan-list li::before {
+  content: "🎓"; /* ikon topi wisuda */
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.2rem;
+  color: #ffcc00;
+}
+
+.project-item {
+  background-color: #f0f4ff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.project-item h2 {
+  margin-top: 0;
+  color: #004aad;
+}
+.project-item ul {
+  margin: 10px 0 0 20px;
+}
+
+#aktivitas {
+  background-color: #f9faff;
+  
+  margin: 40px auto;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+#aktivitas h1 {
+  color: #004aad;
+  margin-bottom: 15px;
+  font-size: 2rem;
+  border-bottom: 3px solid #004aad;
+  padding-bottom: 8px;
+}
+
+#aktivitas p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.aktivitas-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.aktivitas-list li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  color: #004aad;
+}
+
+/* Custom bullet menggunakan before */
+.aktivitas-list li::before {
+  content: "✔"; /* bisa diganti dengan ikon lain */
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #67ff9a;
+  font-weight: bold;
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive untuk layar kecil */
+@media (max-width: 700px) {
+  .hamburger {
+    display: block;
+  }
+  nav ul {
+    display: none; /* sembunyikan menu */
+    flex-direction: column;
+    gap: 4px;
+    background-color: #004aad;
+    position: absolute;
+    top: 60px; /* sesuaikan dengan tinggi header */
+    left: 0;
+    width: 100%;
+    padding: 2px 0;
+    border-radius: 0 0 8px 8px;
+    z-index: 99;
+  }
+  nav ul.show {
+    display: flex; /* tampilkan menu saat aktif */
+  }
+  nav ul li a {
+    color: white;
+    padding: 8px 8px;
+    display: block;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+}
+
+.sidebar-contact {
+  background-color: white;
+  padding: 25px 30px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+  scroll-margin-top: 80px; /* untuk offset sticky navbar */
+}
+
+.sidebar-contact h2 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #000000;
+  padding-bottom: 8px;
+}
+.sidebar-contact a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+.sidebar-contact a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+.social-links a {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+/* Footer styling */
+footer {
+  position: relative;
+  text-align: center;
+  padding: 15px 0;
+  background-color: #004aad;
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-top: 40px;
+}
